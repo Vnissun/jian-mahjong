@@ -1,0 +1,45 @@
+
+#///////////////////////////
+# Cocos Creator 3D Project
+#///////////////////////////
+library/
+temp/
+local/
+build/
+profiles/
+native
+#//////////////////////////
+# NPM
+#//////////////////////////
+node_modules/
+
+#//////////////////////////
+# VSCode
+#//////////////////////////
+.vscode/
+
+#//////////////////////////
+# WebStorm
+#//////////////////////////
+.idea/
+screenshots/
+build-*.log
+
+server/dist/
+release/
+*.tar.gz
+
+.runtime/
+server/test-admin-secret.json
+
+# Local deployment configuration and generated files
+server/production.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+output/
+_disabled/
+.creator/

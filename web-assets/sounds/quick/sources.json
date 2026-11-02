@@ -1,0 +1,139 @@
+{
+  "sourcePage": "https://jarryherr.github.io/doudizhu-soundboard/",
+  "importedAt": "2026-10-29",
+  "processing": "Mono PCM WAV, 24000 Hz; peak normalized to 0.88; original speech and speed retained",
+  "clips": [
+    {
+      "id": "great",
+      "sourceId": "voice-106",
+      "title": "您的牌打得也忒好了呀",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0106.mp3",
+      "originalSha256": "7b196846d47cd27549de5eaf34cc8b5ce99ee4392f3c4df84c88545c95e29ba3",
+      "wavSha256": "f40e71278e2da0ee6eb75df84d929b523e5a5b8c75d5c02530a20bc80b6348ff",
+      "duration": 2.0374583333333334,
+      "sampleRate": 24000
+    },
+    {
+      "id": "hurry",
+      "sourceId": "voice-97",
+      "title": "快点啊 都等得我花儿都谢了",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0097.mp3",
+      "originalSha256": "956ba1d6f511c08fae20bc5eb4e7b9aff8fe6db4ed234f7defe6cc58e451cb31",
+      "wavSha256": "483db8d6d58320ec97bc69a2a2de64ac06c7600b4bef65f535bfa0e0aceccb00",
+      "duration": 3.6570416666666667,
+      "sampleRate": 24000
+    },
+    {
+      "id": "hello",
+      "sourceId": "voice-118",
+      "title": "大家好很高兴见到各位",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0118.mp3",
+      "originalSha256": "462d060e0f6fdb08ffe9e82db3e28f58e0360df11f37e19f299515e9744c3acb",
+      "wavSha256": "94958dc9897c0364fec69472222377faec82a4d4a6c9c4141e9584143e48f6e6",
+      "duration": 2.9778333333333333,
+      "sampleRate": 24000
+    },
+    {
+      "id": "thanks",
+      "sourceId": "voice-110",
+      "title": "手抖了不好意思啊",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0110.mp3",
+      "originalSha256": "ab6d0b6e4f69ae45a5879554b6c287c0e58e706135f2df67bc222b98821fdb89",
+      "wavSha256": "d666f5921b1bf1bde525fb03af759b6450e43813622551fb8c210c68bdcf697e",
+      "duration": 1.4769583333333334,
+      "sampleRate": 24000
+    },
+    {
+      "id": "nice",
+      "sourceId": "voice-123",
+      "title": "我墙都不扶 就服你",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0123.mp3",
+      "originalSha256": "57d4091121f9f4601ab636a67899d0e6dffa83039c8996dee92d90be75d8ca49",
+      "wavSha256": "1de4d5c4b304af727c1c028aa63b19078e727a4238e81751b774fd030fc9cfa7",
+      "duration": 3.2529583333333334,
+      "sampleRate": 24000
+    },
+    {
+      "id": "careful",
+      "sourceId": "voice-121",
+      "title": "这谁顶得住啊",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0121.mp3",
+      "originalSha256": "97c699c0c9a707f3975dd332eb779c41a0ccb187e2b0abdde6d2bf09c3a9d023",
+      "wavSha256": "0f5e4f111206fd14fb12671d902aeaa1ca3079eef294240fd19f3d6270c6e375",
+      "duration": 2.8445833333333335,
+      "sampleRate": 24000
+    },
+    {
+      "id": "luck",
+      "sourceId": "voice-112",
+      "title": "遥遥领先",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0112.mp3",
+      "originalSha256": "98d1a3e8a50bffca27355e98802846cef988ce10ed8bd2612955a297760c462b",
+      "wavSha256": "d37270af57e4ea68220088b1f3f2b4de38bb0b11e0cda8b7385727062a0abc0c",
+      "duration": 1.7334166666666666,
+      "sampleRate": 24000
+    },
+    {
+      "id": "unlucky",
+      "sourceId": "voice-103",
+      "title": "心态崩了呀",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0103.mp3",
+      "originalSha256": "3eed3215bd3985988fb69e6b958e714335168fe5d03b5d88161b9494a0a194ba",
+      "wavSha256": "ce38d9c98069f2029a21c08fb8d7a685df5cbbf3c2b6a8f5b092254449885158",
+      "duration": 2.517333333333333,
+      "sampleRate": 24000
+    },
+    {
+      "id": "thinking",
+      "sourceId": "voice-92",
+      "title": "我能怎么办 我也很绝望啊",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0092.mp3",
+      "originalSha256": "df6f20cc1d3e0b34e398f822c0691d4fa050cd2a9457611393cf9560681144e9",
+      "wavSha256": "e24ee1c998a04ee4c8aee34eb76d6a21f795812aa790b7496d70f9150a641302",
+      "duration": 3.857625,
+      "sampleRate": 24000
+    },
+    {
+      "id": "again",
+      "sourceId": "voice-117",
+      "title": "不要走 决战到天亮啦",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0117.mp3",
+      "originalSha256": "5c091aa0f23ebe4fcd9fe104f276e84d230990052e360d0fbee8dd65b0b2f841",
+      "wavSha256": "e213f7d9b8c16818ae3c431a639c2a18f93801ab214c451eadb03045a5608366",
+      "duration": 3.787625,
+      "sampleRate": 24000
+    },
+    {
+      "id": "friends",
+      "sourceId": "music-27",
+      "title": "加个好友，以后一起玩",
+      "group": "人物语音_快捷聊天",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/m027.mp3",
+      "originalSha256": "81b067d53296c0d43ff72570e7f727c8d414a039dc63a12e4260111f3ae0b9f6",
+      "wavSha256": "e1f059e62741346df639e601a6d2b4f9261ab76a3341e3e7ff0af70753686524",
+      "duration": 2.2,
+      "sampleRate": 24000
+    },
+    {
+      "id": "amazing",
+      "sourceId": "voice-119",
+      "title": "老铁666啊",
+      "group": "人物语音_男声1",
+      "url": "https://jarryherr.github.io/doudizhu-soundboard/audio/v0119.mp3",
+      "originalSha256": "e6996bd5163be02f24524c5f87030daa0a86c4fbf28fa66d4446c191af613e14",
+      "wavSha256": "17837a66bd855614a776e8c2fce77c798f6cb4280675ca8fbd1269c803886345",
+      "duration": 1.8849583333333333,
+      "sampleRate": 24000
+    }
+  ]
+}

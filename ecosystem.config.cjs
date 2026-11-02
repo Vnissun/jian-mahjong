@@ -1,0 +1,1 @@
+module.exports = { apps: [{ name: 'ji-an-mahjong', cwd: __dirname, script: 'server/start-production.cjs', interpreter: process.env.NODE_BINARY || '/www/server/nodejs/v16.20.2/bin/node', instances: 1, exec_mode: 'fork', autorestart: true, max_memory_restart: '512M' }] };

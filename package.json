@@ -1,0 +1,31 @@
+{
+  "name": "ji-an-mahjong",
+  "uuid": "7e245eaf-cc3f-4607-904c-005e8dd69da7",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "node tools/test.cjs",
+    "typecheck": "node tools/typecheck.cjs",
+    "preview": "node tools/serve.cjs",
+    "test:browser": "node tools/browser-smoke.cjs",
+    "test:media": "node server/media-test.cjs",
+    "test:bots": "node server/build.cjs && node server/bot-test.cjs",
+    "test:rules-review": "node server/build.cjs && node server/rules-review-test.cjs",
+    "build:server": "node server/build.cjs",
+    "start": "node server/server.cjs",
+    "test:server": "node server/build.cjs && node server/deferred-gang-test.cjs && node server/test.cjs",
+    "test:controls": "node server/build.cjs && node server/controls-test.cjs && node server/controls-http-test.cjs",
+    "test:voice": "node server/voice-test.cjs && node server/voice-http-test.cjs",
+    "test:ai": "node server/build.cjs && node server/ai-strategy-test.cjs",
+    "test:admin": "node server/test-admin-test.cjs",
+    "test:online": "node tools/online-browser.cjs",
+    "start:production": "node server/start-production.cjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=16.20.2"
+  }
+}

@@ -1,0 +1,12 @@
+Twemoji graphics attribution
+
+Poop (1f4a9), Tomato (1f345), Egg (1f95a), Thong sandal (1fa74), Bomb (1f4a3).
+Copyright 2020 Twitter, Inc and other contributors.
+Source: https://github.com/twitter/twemoji/tree/v14.0.2/assets/72x72
+Graphics: Creative Commons Attribution 4.0 International (CC BY 4.0).
+License: https://creativecommons.org/licenses/by/4.0/
+Full license text: LICENSE-GRAPHICS.txt
+
+Original PNG graphics are unmodified. Projectile paths, trails, impact splashes,
+stink lines, timing, scaling and rotation are implemented by this game.
+No third-party animation runtime or external image request is needed during play.

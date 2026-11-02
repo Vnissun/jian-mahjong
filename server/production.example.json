@@ -1,0 +1,6 @@
+{
+  "host": "127.0.0.1",
+  "port": 7458,
+  "publicUrl": "https://your-domain.example",
+  "accessPassword": "CHANGE_ME_ACCESS_PASSWORD"
+}

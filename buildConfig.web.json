@@ -1,0 +1,26 @@
+{
+  "name": "集安麻将",
+  "platform": "web-desktop",
+  "outputName": "web-repaired",
+  "buildPath": "project://build",
+  "startScene": "b53888b3-f155-4856-89e2-2f3cb21f1f45",
+  "scenes": [
+    {
+      "url": "db://assets/game.scene",
+      "uuid": "b53888b3-f155-4856-89e2-2f3cb21f1f45"
+    }
+  ],
+  "debug": true,
+  "sourceMaps": true,
+  "packages": {
+    "web-desktop": {
+      "showFPS": false,
+      "embedWebDebugger": false,
+      "resolution": {
+        "designWidth": 1280,
+        "designHeight": 720
+      },
+      "exactFitScreen": true
+    }
+  }
+}

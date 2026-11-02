@@ -1,0 +1,15 @@
+node_modules
+.git
+library
+temp
+profiles
+screenshots
+_disabled
+tests
+server/dist
+release
+*.log
+*.tar.gz
+
+.runtime
+server/test-admin-secret.json

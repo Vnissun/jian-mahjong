@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>集安麻将</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="screen-orientation" content="landscape">
+  <meta name="theme-color" content="#091f1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #091f1e; }
+    body { position: fixed; inset: 0; overscroll-behavior: none; }
+    #GameDiv { width: 100vw; height: 100vh; outline: none; }
+    #Cocos3dGameContainer, #GameCanvas { width: 100%; height: 100%; }
+    canvas { display: block; outline: none; touch-action: none; }
+    #MobileScreenTools { display: none; }
+    html.mobile-game #MobileScreenTools { display: block; position: fixed; z-index: 10000; right: max(6px, env(safe-area-inset-right)); top: max(66px, env(safe-area-inset-top)); }
+    #EnterFullscreen { border: 1px solid #a58b56; border-radius: 18px; color: #eef3e2; background: #0f2b28ef; padding: 5px 10px; font: 12px sans-serif; }
+    #FullscreenHint { max-width: 240px; background: #113d36ed; color: #eef3e2; padding: 8px; font: 13px sans-serif; }
+    html.mobile-game.is-fullscreen #MobileScreenTools { display: none; }
+    @media (orientation: portrait) {
+      html.mobile-game #MobileScreenTools { right: 4px; top: auto; bottom: max(70px, env(safe-area-inset-bottom)); }
+    }
+  </style>
+</head>
+<body>
+  <div id="GameDiv" cc_exact_fit_screen="true">
+    <div id="Cocos3dGameContainer"><canvas id="GameCanvas" width="1280" height="720" tabindex="0"></canvas></div>
+  </div>
+  <div id="MobileScreenTools"><button id="EnterFullscreen" type="button">全屏游戏</button><div id="FullscreenHint" hidden></div></div>
+  <script>
+    (function () {
+      var mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (mobile) document.documentElement.classList.add('mobile-game');
+      function fullscreenChanged() {
+        document.documentElement.classList.toggle('is-fullscreen', !!(document.fullscreenElement || document.webkitFullscreenElement));
+      }
+      document.addEventListener('fullscreenchange', fullscreenChanged);
+      document.addEventListener('webkitfullscreenchange', fullscreenChanged);
+    })();
+  </script>
+  <script>
+    // Also show the gate when Nginx serves the HTML and proxies only /api/.
+    window.requireGameAccess = async function () {
+      var response;
+      try { response = await fetch('/api/access/status', { cache: 'no-store' }); }
+      catch (_) { response = null; }
+      if (response && response.ok) return;
+      var cover = document.createElement('div');
+      cover.style.cssText = 'position:fixed;inset:0;z-index:20000;background:radial-gradient(ellipse at 50% 30%,#20574a,#091f1e 80%);display:grid;place-items:center;color:#eef3e2;font:18px sans-serif';
+      cover.innerHTML = '<form id="GameAccessLogin" style="width:min(80vw,360px);padding:32px;background:#0f2b28;border:1px solid #817343;border-radius:24px;box-shadow:0 24px 80px #0006"><h2>集安麻将 · 好友登录</h2><p>请输入好友访问密码</p><input type="password" autocomplete="current-password" required maxlength="128" placeholder="访问密码" style="box-sizing:border-box;width:100%;padding:14px;font-size:18px"><button style="width:100%;padding:14px;margin-top:16px;background:#89672f;color:white;border:0;font-size:18px">登录进入</button><p role="status"></p></form>';
+      document.body.appendChild(cover);
+      await new Promise(function (resolve) {
+        var form = cover.querySelector('form');
+        form.onsubmit = async function (event) {
+          event.preventDefault(); var button = form.querySelector('button'); button.disabled = true;
+          try {
+            var res = await fetch('/api/access/login', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({password:form.querySelector('input').value}) });
+            var data = await res.json(); if (!res.ok) throw new Error(data.error || '登录失败');
+            cover.remove(); resolve();
+          } catch (error) { form.querySelector('[role="status"]').textContent = '登录失败：' + error.message; }
+          finally { button.disabled = false; }
+        };
+      });
+    };
+  </script>
+  <%- include(cocosTemplate, {}).replace("System.import('./index.js')", "window.requireGameAccess().then(function () { return System.import('cc'); }).then(function (cc) { cc.game.onPostBaseInitDelegate.add(function () { cc.settings.overrideSettings('screen', 'exactFitScreen', true); }); return System.import('./index.js'); })") %>
+</body>
+</html>
+

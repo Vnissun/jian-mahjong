@@ -1,0 +1,11 @@
+const fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path'),assert=require('node:assert/strict');
+const baseline='output/reference-ui/20261016-152944',protectedFiles=JSON.parse(fs.readFileSync(path.join(baseline,'protected-sha256.json')));
+const changed=Object.entries(protectedFiles).filter(([file,hash])=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')!==hash).map(([file])=>file);
+assert.deepEqual(changed,[],'Core, rules, networking or server files changed');
+const before=fs.readFileSync(path.join(baseline,'ui-before/GameApp.ts'),'utf8').replace(/\r\n/g,'\n');
+const after=fs.readFileSync('assets/scripts/ui/GameApp.ts','utf8').replace(/\r\n/g,'\n');
+assert.equal(after,before.replace("UIHelper.button(this.table.node, 'Lobby', '大厅', 86, 36, sys.isMobile?450:548, 337, () => this.openLobby());","UIHelper.button(this.table.node, 'Lobby', '大厅', 64, 52, 584, 325, () => UIHelper.confirmExit(this.mobileStage ?? this.node, () => this.openLobby()));"),'GameApp change exceeds the authorized button layout');
+const manifest=JSON.parse(fs.readFileSync('output/reference-ui/import-manifest.json'));
+assert(manifest.every(i=>fs.readFileSync(path.join('..',i.source)).equals(fs.readFileSync(i.target))),'Imported artwork differs from source');
+const result={protectedFiles:Object.keys(protectedFiles).length,changedProtectedFiles:changed,gameAppChange:'Exit button position, size and confirmation UI only',referenceImages:manifest.length,sourceImagesUnmodified:true};
+fs.writeFileSync('output/reference-ui/verification.json',JSON.stringify(result,null,2)+'\n');console.log(result);
