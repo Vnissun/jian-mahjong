@@ -1,6 +1,6 @@
-# 集安麻将
+# 集安麻将--吉林通化集安麻将玩法，撅夹钓
 
-本仓库根目录即原工程 `NewProject`，使用 **Cocos Creator 3.8.8**。外层 `assets` 是历史代码，`_disabled` 中的测试和联机模块不参与游戏构建；请修改本目录 `assets/scripts`。
+本仓库根目录即原工程，使用 **Cocos Creator 3.8.8**。外层 `assets` 是历史代码，`_disabled` 中的测试和联机模块不参与游戏构建；请修改本目录 `assets/scripts`。
 
 ## 好友线上对战
 
